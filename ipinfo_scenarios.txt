@@ -1,0 +1,24 @@
+scenario1:
+sending a get request with valid ip and get geo info.
+expected result:
+status_code 200 returned in response and the returned json equal to the ref json.
+
+scenario2:
+sending a get request with an invalid ip and get geo info.
+expected result:
+status_code 404 returned in response with a relevant error message.
+
+scenario3:
+sending a get request with valid ip and get ASN info.
+expected result:
+status_code 200 returned in response and the returned json equal to the ref "ASN" json.
+
+scenario4:
+sending a get request with an unmasked ip and get privacy info.
+expected result:
+status_code 200 returned in response and the returned json equal to the "privacy_off" ref json.
+
+scenario5:
+sending a get request with a masked ip and get privacy info.
+expected result:
+status_code 200 returned in response and the returned json equal to the "privacy_on" ref json.

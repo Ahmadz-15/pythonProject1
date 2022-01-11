@@ -74,7 +74,7 @@ assert response[0] == 404 and response[1]['error']['title'] == 'Wrong ip'
 response = get_info(server_url, valid_ip, access_token, info_type=info_types['ASN'])
 assert response[0] == 200 and response[1] == asn_expected_result
 
-# Getting privacy info for unmasked ip, expecting json response = privacy_off
+# Getting privacy info with unmasked ip, expecting json response = privacy_off
 response = get_info(server_url, valid_ip, access_token, info_type=info_types['Privacy_Detection'])
 assert response[0] == 200 and response[1] == privacy_off
 
