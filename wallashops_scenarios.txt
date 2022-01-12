@@ -1,0 +1,33 @@
+tools:
+    Selenium
+    chromedriver 97
+
+scenario1:
+    #Search for a product#
+        Steps:
+            1-click on search banner
+            2-type product name
+            3-tap on enter button
+            4-verify that the results matches the searched product
+        expected result:
+            the results matches the searched product
+
+scenario2:
+    #add a product to basket#
+        steps:
+            1-choose a product
+            2-click on add product to basket
+            3-click on continue shopping
+        expected result:
+            the selected product added to basket
+
+scenario3:
+    #check shopping basket and print total price#
+        steps:
+            1-back to main page
+            2-click on shopping basket
+            3-check that shopping basket is not empty
+            4-print total price
+        expected result:
+            basket is not empty and total price printed on screen
+
